@@ -77,7 +77,7 @@ object FreestylePlugin extends AutoPlugin {
       orgGithubSetting := GitHubSettings(
         organization = "frees-io",
         project = (name in LocalRootProject).value,
-        organizationName = "Freestyle",
+        organizationName = "47 Degrees",
         groupId = "io.frees",
         organizationHomePage = url("http://frees.io"),
         organizationEmail = "hello@47deg.com"
