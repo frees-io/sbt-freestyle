@@ -7,9 +7,7 @@
 
 # sbt-freestyle
 
-sbt-plugin for Freestyle projects
-
-# sbt-freestyle in the wild
+sbt-plugin for Freestyle projects.
 
 [comment]: # (Start Copyright)
 # Copyright

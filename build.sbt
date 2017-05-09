@@ -19,10 +19,11 @@ lazy val `sbt-freestyle` = project
     scalaOrganization := "org.scala-lang",
     crossScalaVersions := Seq("2.10.6"),
     resolvers += Resolver.sonatypeRepo("snapshots"),
+    orgProjectName := "Freestyle",
     orgGithubSetting := GitHubSettings(
       organization = "frees-io",
       project = (name in LocalRootProject).value,
-      organizationName = "Freestyle",
+      organizationName = "47 Degrees",
       groupId = "io.frees",
       organizationHomePage = url("http://frees.io"),
       organizationEmail = "hello@47deg.com"
@@ -30,7 +31,6 @@ lazy val `sbt-freestyle` = project
     orgMaintainersSetting := List(
       Dev("47degfreestyle", Some("47 Degrees (twitter: @47deg)"), Some("hello@47deg.com"))),
     orgScriptTaskListSetting := List(
-      orgValidateFiles.asRunnableItem,
       orgCheckSettings.asRunnableItem,
       "clean".asRunnableItemFull,
       "compile".asRunnableItemFull,

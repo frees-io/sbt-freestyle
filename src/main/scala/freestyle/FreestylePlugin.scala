@@ -84,19 +84,21 @@ object FreestylePlugin extends AutoPlugin {
       ),
       orgMaintainersSetting := List(
         Dev("47degfreestyle", Some("47 Degrees (twitter: @47deg)"), Some("hello@47deg.com"))),
+      // format: OFF
       orgBadgeListSetting := List(
         TravisBadge.apply,
         CodecovBadge.apply,
-        MavenCentralBadge.apply,
+        { info => MavenCentralBadge.apply(info.copy(libName = "freestyle")) },
         ScalaLangBadge.apply,
         LicenseBadge.apply,
-        GitterBadge.apply,
+        // Gitter badge (owner field) can be configured with default value if we migrate it to the frees-io organization
+        { info => GitterBadge.apply(info.copy(owner = "47deg", repo = "freestyle")) },
         GitHubIssuesBadge.apply,
         ScalaJSBadge.apply
       ),
+      // format: ON
       orgSupportedScalaJSVersion := Some("0.6.15"),
       orgScriptTaskListSetting := List(
-        orgValidateFiles.asRunnableItem,
         (clean in Global).asRunnableItemFull,
         SetSetting(coverageEnabled in Global, true).asRunnableItem,
         (compile in Compile).asRunnableItemFull,
