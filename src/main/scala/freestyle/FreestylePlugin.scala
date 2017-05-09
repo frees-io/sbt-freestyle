@@ -25,6 +25,7 @@ import sbtorgpolicies.OrgPoliciesPlugin
 import sbtorgpolicies.OrgPoliciesPlugin.autoImport._
 import sbtorgpolicies.model._
 import sbtorgpolicies.runnable.SetSetting
+import sbtorgpolicies.templates._
 import sbtorgpolicies.templates.badges._
 import sbtorgpolicies.runnable.syntax._
 import scoverage.ScoverageKeys
@@ -79,24 +80,58 @@ object FreestylePlugin extends AutoPlugin {
         project = (name in LocalRootProject).value,
         organizationName = "47 Degrees",
         groupId = "io.frees",
-        organizationHomePage = url("http://frees.io"),
+        organizationHomePage = url("http://47deg.com"),
         organizationEmail = "hello@47deg.com"
       ),
       orgMaintainersSetting := List(
         Dev("47degfreestyle", Some("47 Degrees (twitter: @47deg)"), Some("hello@47deg.com"))),
+      // format: OFF
       orgBadgeListSetting := List(
         TravisBadge.apply,
         CodecovBadge.apply,
-        MavenCentralBadge.apply,
+        { info => MavenCentralBadge.apply(info.copy(libName = "freestyle")) },
         ScalaLangBadge.apply,
         LicenseBadge.apply,
-        GitterBadge.apply,
+        // Gitter badge (owner field) can be configured with default value if we migrate it to the frees-io organization
+        { info => GitterBadge.apply(info.copy(owner = "47deg", repo = "freestyle")) },
         GitHubIssuesBadge.apply,
         ScalaJSBadge.apply
       ),
+      orgEnforcedFilesSetting := List(
+        LicenseFileType(orgGithubSetting.value, orgLicenseSetting.value, startYear.value),
+        ContributingFileType(
+          orgProjectName.value,
+          // Organization field can be configured with default value if we migrate it to the frees-io organization
+          orgGithubSetting.value.copy(organization = "47deg", project = "freestyle")
+        ),
+        AuthorsFileType(
+          name.value,
+          orgGithubSetting.value,
+          orgMaintainersSetting.value,
+          orgContributorsSetting.value),
+        NoticeFileType(orgProjectName.value, orgGithubSetting.value, orgLicenseSetting.value, startYear.value),
+        VersionSbtFileType,
+        ChangelogFileType,
+        ReadmeFileType(
+          orgProjectName.value,
+          orgGithubSetting.value,
+          startYear.value,
+          orgLicenseSetting.value,
+          orgCommitBranchSetting.value,
+          sbtPlugin.value,
+          name.value,
+          version.value,
+          scalaBinaryVersion.value,
+          sbtBinaryVersion.value,
+          orgSupportedScalaJSVersion.value,
+          orgBadgeListSetting.value
+        ),
+        ScalafmtFileType,
+        TravisFileType(crossScalaVersions.value, orgScriptCICommandKey, orgAfterCISuccessCommandKey)
+      ),
+      // format: ON
       orgSupportedScalaJSVersion := Some("0.6.15"),
       orgScriptTaskListSetting := List(
-        orgValidateFiles.asRunnableItem,
         (clean in Global).asRunnableItemFull,
         SetSetting(coverageEnabled in Global, true).asRunnableItem,
         (compile in Compile).asRunnableItemFull,
