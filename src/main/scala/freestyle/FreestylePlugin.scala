@@ -30,7 +30,6 @@ import sbtorgpolicies.templates.badges._
 import sbtorgpolicies.runnable.syntax._
 import scoverage.ScoverageKeys
 import scoverage.ScoverageKeys._
-import tut.Plugin._
 
 object FreestylePlugin extends AutoPlugin {
   override def trigger: PluginTrigger = allRequirements
@@ -141,7 +140,7 @@ object FreestylePlugin extends AutoPlugin {
         SetSetting(coverageEnabled in Global, false).asRunnableItem
       ) ++ guard(
         scalaBinaryVersion.value == "2.12" && ((baseDirectory in LocalRootProject).value / "docs")
-          .exists())((tut in ProjectRef(file("."), "docs")).asRunnableItem),
+          .exists())("docs/tut".asRunnableItem),
       resolvers += Resolver.sonatypeRepo("snapshots"),
       scalacOptions ++= scalacAdvancedOptions,
       scalacOptions ~= (_ filterNot Set("-Yliteral-types", "-Xlint").contains),
