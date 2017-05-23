@@ -51,7 +51,7 @@ object FreestylePlugin extends AutoPlugin {
       micrositeHighlightTheme := "dracula",
       micrositeExternalLayoutsDirectory := (resourceDirectory in Compile).value / "microsite" / "layouts",
       micrositeExternalIncludesDirectory := (resourceDirectory in Compile).value / "microsite" / "includes",
-      includeFilter in Jekyll := ("*.html" | "*.css" | "*.png" | "*.jpg" | "*.gif" | "*.js" | "*.swf" | "*.md" | "CNAME"),
+      includeFilter in Jekyll := ("*.html" | "*.css" | "*.png" | "*.jpg" | "*.gif" | "*.js" | "*.swf" | "*.md" | "*.json" | "CNAME"),
       micrositePalette := Map(
         "brand-primary"   -> "#01C2C2",
         "brand-secondary" -> "#142236",
