@@ -66,7 +66,8 @@ object FreestylePlugin extends AutoPlugin {
 
     lazy val commonDeps: Seq[ModuleID] = Seq(%%("scalatest") % "test")
 
-    lazy val freestyleCoreDeps: Seq[ModuleID] = Seq(%%("freestyle"))
+    def freestyleCoreDeps(version: Option[String] = None): Seq[ModuleID] =
+      Seq(version.fold(%%("freestyle"))(v => %%("freestyle", v)))
   }
 
   override def projectSettings: Seq[Def.Setting[_]] =
