@@ -148,5 +148,5 @@ object FreestylePlugin extends AutoPlugin {
       parallelExecution in Test := false,
       compileOrder in Compile := CompileOrder.JavaThenScala,
       coverageFailOnMinimum := false
-    ) ++ scalaMacroDependencies
+    ) ++ scalaMetaSettings
 }
