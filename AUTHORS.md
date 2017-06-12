@@ -10,6 +10,7 @@ The maintainers of the project are:
 
 These are the people that have contributed to the sbt-freestyle project:
 
+* Adrián Ramírez Fornell <[AdrianRaFo](https://github.com/AdrianRaFo)>
 * Andy Scott <[andyscott](https://github.com/andyscott)>
 * Juan Pedro Moreno <[juanpedromoreno](https://github.com/juanpedromoreno)>
 * Raúl Raja Martínez <[raulraja](https://github.com/raulraja)>
