@@ -148,6 +148,14 @@ object FreestylePlugin extends AutoPlugin {
       scalacOptions ~= (_ filterNot Set("-Yliteral-types", "-Xlint").contains),
       parallelExecution in Test := false,
       compileOrder in Compile := CompileOrder.JavaThenScala,
-      coverageFailOnMinimum := false
+      coverageFailOnMinimum := false,
+      packageDoc in Compile := {
+        val sourceFile = (baseDirectory in LocalRootProject).value / "README.md"
+        val targetFile = crossTarget.value / s"${name.value}-javadoc.jar"
+
+        IO.copy(Seq(sourceFile -> targetFile), overwrite = true).toSeq
+
+        targetFile
+      }
     ) ++ scalaMetaSettings
 }
