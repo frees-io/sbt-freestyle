@@ -49,6 +49,7 @@ object FreestylePlugin extends AutoPlugin {
       micrositeGithubRepo := "freestyle",
       micrositeAnalyticsToken := "UA-18433785-14",
       micrositeHighlightTheme := "dracula",
+      micrositeGitterChannelUrl := "47deg/freestyle",
       micrositeExternalLayoutsDirectory := (resourceDirectory in Compile).value / "microsite" / "layouts",
       micrositeExternalIncludesDirectory := (resourceDirectory in Compile).value / "microsite" / "includes",
       includeFilter in Jekyll := ("*.html" | "*.css" | "*.png" | "*.jpg" | "*.gif" | "*.js" | "*.swf" | "*.md" | "*.json" | "CNAME"),
