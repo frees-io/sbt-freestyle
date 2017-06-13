@@ -69,6 +69,12 @@ object FreestylePlugin extends AutoPlugin {
 
     def freestyleCoreDeps(version: Option[String] = None): Seq[ModuleID] =
       Seq(version.fold(%%("freestyle"))(v => %%("freestyle", v)))
+
+    def toCompileTestList(sequence: Seq[ProjectReference]): List[String] = sequence.toList.map {
+      p =>
+        val project: String = p.asInstanceOf[LocalProject].project
+        s"$project/test"
+    }
   }
 
   override def projectSettings: Seq[Def.Setting[_]] =
@@ -149,6 +155,7 @@ object FreestylePlugin extends AutoPlugin {
       parallelExecution in Test := false,
       compileOrder in Compile := CompileOrder.JavaThenScala,
       coverageFailOnMinimum := false,
+      coverageExcludedFiles in Global := ".*<macro>",
       packageDoc in Compile := {
         val sourceFile = (baseDirectory in LocalRootProject).value / "README.md"
         val targetFile = crossTarget.value / s"${name.value}-javadoc.jar"
