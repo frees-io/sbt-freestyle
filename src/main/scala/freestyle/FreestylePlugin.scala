@@ -17,6 +17,7 @@
 package freestyle
 
 import com.typesafe.sbt.site.jekyll.JekyllPlugin.autoImport._
+import com.typesafe.sbt.site.SitePlugin.autoImport._
 import microsites.MicrositeKeys._
 import sbt.Keys._
 import sbt._
@@ -52,7 +53,8 @@ object FreestylePlugin extends AutoPlugin {
       micrositeGitterChannelUrl := "47deg/freestyle",
       micrositeExternalLayoutsDirectory := (resourceDirectory in Compile).value / "microsite" / "layouts",
       micrositeExternalIncludesDirectory := (resourceDirectory in Compile).value / "microsite" / "includes",
-      includeFilter in Jekyll := ("*.html" | "*.css" | "*.png" | "*.jpg" | "*.gif" | "*.js" | "*.swf" | "*.md" | "*.json" | "CNAME"),
+      includeFilter in makeSite := "*.html" | "*.css" | "*.png" | "*.jpg" | "*.gif" | "*.js" | "*.swf" | "*.yml" | "*.md" | "*.svg" | "*.json" | "CNAME",
+      includeFilter in Jekyll := (includeFilter in makeSite).value,
       micrositePalette := Map(
         "brand-primary"   -> "#01C2C2",
         "brand-secondary" -> "#142236",
