@@ -1,1 +1,20 @@
 # Changelog
+
+## 06/29/2017 - Version 0.1.0
+
+Release changes:
+
+* Plugin provides Freestyle core Deps ([#1](https://github.com/frees-io/sbt-freestyle/pull/1))
+* Bumps to new sbt org policies version ([#2](https://github.com/frees-io/sbt-freestyle/pull/2))
+* Disables tut check when there is no docs ([#3](https://github.com/frees-io/sbt-freestyle/pull/3))
+* Bumps org-policies version ([#4](https://github.com/frees-io/sbt-freestyle/pull/4))
+* sbt-freestyle Configuration Adjustments ([#5](https://github.com/frees-io/sbt-freestyle/pull/5))
+* Bumps org-policies version ([#6](https://github.com/frees-io/sbt-freestyle/pull/6))
+* Upgrades tut bumping sbt-org-policies version to 0.5.0 ([#7](https://github.com/frees-io/sbt-freestyle/pull/7))
+* Adds .json to list of files included in doc sites  ([#8](https://github.com/frees-io/sbt-freestyle/pull/8))
+* Bumps org-policies version to 0.5.3 ([#9](https://github.com/frees-io/sbt-freestyle/pull/9))
+* Makes the freestyle core dependency parametrizable ([#10](https://github.com/frees-io/sbt-freestyle/pull/10))
+* Replaces scalaMacros settings by scalaMeta settings ([#11](https://github.com/frees-io/sbt-freestyle/pull/11))
+* Fixed broken link ([#13](https://github.com/frees-io/sbt-freestyle/pull/13))
+* Update sbt-org-policies version ([#15](https://github.com/frees-io/sbt-freestyle/pull/15))
+* Removes scalameta settings and releases 0.1.0 version ([#17](https://github.com/frees-io/sbt-freestyle/pull/17))
