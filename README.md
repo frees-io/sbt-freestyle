@@ -9,6 +9,16 @@
 
 sbt-plugin for Freestyle projects.
 
+## Installation
+
+To get started with SBT, simply add the following to your `plugins.sbt` file.
+
+[comment]: # (Start Replace)
+
+```scala
+addSbtPlugin("io.frees" % "sbt-freestyle" % "0.1.0")
+```
+
 [comment]: # (Start Copyright)
 # Copyright
 

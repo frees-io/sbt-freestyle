@@ -166,5 +166,5 @@ object FreestylePlugin extends AutoPlugin {
 
         targetFile
       }
-    ) ++ scalaMetaSettings
+    )
 }
