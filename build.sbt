@@ -12,7 +12,7 @@ lazy val `sbt-freestyle` = project
   .in(file("."))
   .settings(name := "sbt-freestyle")
   .settings(Seq(
-    addSbtPlugin("com.47deg" % "sbt-org-policies" % "0.5.9"),
+    addSbtPlugin("com.47deg" % "sbt-org-policies" % "0.5.10"),
     sbtPlugin := true,
     description := "sbt-plugin for Freestyle projects",
     startYear := Option(2017),
