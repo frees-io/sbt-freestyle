@@ -1,5 +1,12 @@
 # Changelog
 
+## 06/30/2017 - Version 0.1.1
+
+Release changes:
+
+* Update to latest org policies ([#18](https://github.com/frees-io/sbt-freestyle/pull/18))
+
+
 ## 06/29/2017 - Version 0.1.0
 
 Release changes:
