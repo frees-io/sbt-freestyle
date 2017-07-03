@@ -1,5 +1,12 @@
 # Changelog
 
+## 07/03/2017 - Version 0.1.2
+
+Release changes:
+
+* Releases new version of sbt-freestyle ([#19](https://github.com/frees-io/sbt-freestyle/pull/19))
+
+
 ## 06/30/2017 - Version 0.1.1
 
 Release changes:
