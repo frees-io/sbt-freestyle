@@ -12,15 +12,15 @@ lazy val `sbt-freestyle` = project
   .in(file("."))
   .settings(name := "sbt-freestyle")
   .settings(Seq(
-    addSbtPlugin("com.47deg" % "sbt-org-policies" % "0.5.12"),
+    addSbtPlugin("com.47deg" % "sbt-org-policies" % "0.7.1"),
     sbtPlugin := true,
     description := "sbt-plugin for Freestyle projects",
     startYear := Option(2017),
     homepage := Option(url("http://frees.io")),
     organizationHomepage := Option(new URL("http://frees.io/")),
-    scalaVersion := "2.10.6",
+    scalaVersion := scalac.`2.12`,
     scalaOrganization := "org.scala-lang",
-    crossScalaVersions := Seq("2.10.6"),
+    crossScalaVersions := Seq(scalac.`2.12`),
     resolvers += Resolver.sonatypeRepo("snapshots"),
     orgProjectName := "Freestyle",
     orgGithubSetting := GitHubSettings(
@@ -44,7 +44,7 @@ lazy val `sbt-freestyle` = project
       ContributingFileType(
         orgProjectName.value,
         // Organization field can be configured with default value if we migrate it to the frees-io organization
-        orgGithubSetting.value.copy(organization = "47deg", project = "freestyle")),
+        orgGithubSetting.value.copy(project = "freestyle")),
       AuthorsFileType(
         name.value,
         orgGithubSetting.value,
