@@ -16,10 +16,13 @@ To get started with SBT, simply add the following to your `plugins.sbt` file.
 [comment]: # (Start Replace)
 
 ```scala
-addSbtPlugin("io.frees" % "sbt-freestyle" % "0.1.0")
+addSbtPlugin("io.frees" % "sbt-freestyle" % "0.2.0")
 ```
 
+[comment]: # (End Replace)
+
 [comment]: # (Start Copyright)
+
 # Copyright
 
 Freestyle is designed and developed by 47 Degrees
