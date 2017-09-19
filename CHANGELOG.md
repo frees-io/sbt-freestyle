@@ -1,5 +1,13 @@
 # Changelog
 
+## 09/19/2017 - Version 0.2.1
+
+Release changes:
+
+* Updated readme sbt-freestyle version ([#22](https://github.com/frees-io/sbt-freestyle/pull/22))
+* Bumps sbt-org-policies version ([#24](https://github.com/frees-io/sbt-freestyle/pull/24))
+
+
 ## 09/19/2017 - Version 0.2.0
 
 Release changes:
