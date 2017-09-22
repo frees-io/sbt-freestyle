@@ -1,5 +1,12 @@
 # Changelog
 
+## 09/22/2017 - Version 0.2.2
+
+Release changes:
+
+* Release 0.2.2 ([#25](https://github.com/frees-io/sbt-freestyle/pull/25))
+
+
 ## 09/19/2017 - Version 0.2.1
 
 Release changes:
