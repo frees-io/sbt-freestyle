@@ -1,5 +1,12 @@
 # Changelog
 
+## 10/04/2017 - Version 0.2.3
+
+Release changes:
+
+* Bumps to 0.7.8 sbt-org-policies ([#26](https://github.com/frees-io/sbt-freestyle/pull/26))
+
+
 ## 09/22/2017 - Version 0.2.2
 
 Release changes:
