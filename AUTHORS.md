@@ -14,4 +14,5 @@ These are the people that have contributed to the sbt-freestyle project:
 * Ana Mª Marquez <[anamariamv](https://github.com/anamariamv)>
 * Juan Pedro Moreno <[juanpedromoreno](https://github.com/juanpedromoreno)>
 * Raúl Raja Martínez <[raulraja](https://github.com/raulraja)>
+* Suhas Gaddam <[suhasgaddam](https://github.com/suhasgaddam)>
 * andy scott <[andyscott](https://github.com/andyscott)>
