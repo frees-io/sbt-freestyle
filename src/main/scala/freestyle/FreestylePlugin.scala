@@ -21,7 +21,6 @@ import com.typesafe.sbt.site.SitePlugin.autoImport._
 import microsites.MicrositeKeys._
 import sbt.Keys._
 import sbt._
-import sbt.io.CopyOptions
 import sbtorgpolicies.OrgPoliciesKeys.orgBadgeListSetting
 import sbtorgpolicies.OrgPoliciesPlugin
 import sbtorgpolicies.OrgPoliciesPlugin.autoImport._
@@ -158,14 +157,6 @@ object FreestylePlugin extends AutoPlugin {
       parallelExecution in Test := false,
       compileOrder in Compile := CompileOrder.JavaThenScala,
       coverageFailOnMinimum := false,
-      coverageExcludedFiles in Global := ".*<macro>",
-      packageDoc in Compile := {
-        val sourceFile = (baseDirectory in LocalRootProject).value / "README.md"
-        val targetFile = crossTarget.value / s"${name.value}-javadoc.jar"
-
-        IO.copy(Seq(sourceFile -> targetFile), CopyOptions().withOverwrite(true)).toSeq
-
-        targetFile
-      }
-    )
+      coverageExcludedFiles in Global := ".*<macro>"
+    ) ++ compat.packageDocSettings
 }
