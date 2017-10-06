@@ -1,5 +1,12 @@
 # Changelog
 
+## 10/06/2017 - Version 0.2.5
+
+Release changes:
+
+* sbt-freestyle cross sbt versioned ([#28](https://github.com/frees-io/sbt-freestyle/pull/28))
+
+
 ## 10/05/2017 - Version 0.2.4
 
 Release changes:
