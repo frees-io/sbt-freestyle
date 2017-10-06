@@ -14,6 +14,7 @@ lazy val `sbt-freestyle` = project
   .settings(Seq(
     addSbtPlugin(%("sbt-org-policies", true)),
     sbtPlugin := true,
+    crossSbtVersions := Seq(sbtV.`0.13`, sbtV.`1.0`),
     description := "sbt-plugin for Freestyle projects",
     startYear := Option(2017),
     homepage := Option(url("http://frees.io")),
