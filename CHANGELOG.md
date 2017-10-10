@@ -1,5 +1,12 @@
 # Changelog
 
+## 10/10/2017 - Version 0.2.7
+
+Release changes:
+
+* Upgrades sbt-freestyle ([#30](https://github.com/frees-io/sbt-freestyle/pull/30))
+
+
 ## 10/10/2017 - Version 0.2.6
 
 Release changes:
