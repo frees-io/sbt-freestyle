@@ -1,5 +1,12 @@
 # Changelog
 
+## 10/13/2017 - Version 0.2.8
+
+Release changes:
+
+* Fixes core deps artifact name ([#31](https://github.com/frees-io/sbt-freestyle/pull/31))
+
+
 ## 10/10/2017 - Version 0.2.7
 
 Release changes:
