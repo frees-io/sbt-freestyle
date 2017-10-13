@@ -7,7 +7,9 @@
 
 # sbt-freestyle
 
-sbt-plugin for Freestyle projects.
+sbt-plugin for Freestyle projects within of `frees-io` organization.
+
+In other words, it's just a bridge between [sbt-org-policies](https://github.com/47deg/sbt-org-policies) and all the projects within of `frees-io` organization. Its main responsibility is to set up common configurations across all the freestyle projects, as well as providing some sbt settings, tasks, commands, and utilities offered by the `sbt-org-policies` plugin. Hence, it might not have sense using it outside the `frees-io` organization.
 
 ## Installation
 
