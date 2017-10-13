@@ -70,7 +70,7 @@ object FreestylePlugin extends AutoPlugin {
     lazy val commonDeps: Seq[ModuleID] = Seq(%%("scalatest") % "test")
 
     def freestyleCoreDeps(version: Option[String] = None): Seq[ModuleID] =
-      Seq(version.fold(%%("freestyle"))(v => %%("freestyle", v)))
+      Seq(version.fold(%%("frees-core"))(v => %%("frees-core", v)))
 
     def toCompileTestList(sequence: Seq[ProjectReference]): List[String] = sequence.toList.map {
       p =>
@@ -98,7 +98,7 @@ object FreestylePlugin extends AutoPlugin {
       orgBadgeListSetting := List(
         TravisBadge.apply,
         CodecovBadge.apply,
-        { info => MavenCentralBadge.apply(info.copy(libName = "freestyle")) },
+        { info => MavenCentralBadge.apply(info.copy(libName = "frees")) },
         ScalaLangBadge.apply,
         LicenseBadge.apply,
         // Gitter badge (owner field) can be configured with default value if we migrate it to the frees-io organization
