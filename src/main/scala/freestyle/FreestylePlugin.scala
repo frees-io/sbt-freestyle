@@ -24,11 +24,11 @@ import sbt._
 import sbtorgpolicies.OrgPoliciesKeys.orgBadgeListSetting
 import sbtorgpolicies.OrgPoliciesPlugin
 import sbtorgpolicies.OrgPoliciesPlugin.autoImport._
-import sbtorgpolicies.model._
 import sbtorgpolicies.runnable.SetSetting
 import sbtorgpolicies.templates._
 import sbtorgpolicies.templates.badges._
 import sbtorgpolicies.runnable.syntax._
+import sbtorgpolicies.model._
 import scoverage.ScoverageKeys
 import scoverage.ScoverageKeys._
 
@@ -152,6 +152,8 @@ object FreestylePlugin extends AutoPlugin {
         scalaBinaryVersion.value == "2.12" && ((baseDirectory in LocalRootProject).value / "docs")
           .exists())("docs/tut".asRunnableItem),
       resolvers += Resolver.sonatypeRepo("snapshots"),
+      scalaVersion := "2.12.3",
+      crossScalaVersions := Seq(scalac.`2.11`, "2.12.3"),
       scalacOptions ++= scalacAdvancedOptions,
       scalacOptions ~= (_ filterNot Set("-Yliteral-types", "-Xlint").contains),
       parallelExecution in Test := false,
