@@ -1,5 +1,12 @@
 # Changelog
 
+## 11/02/2017 - Version 0.3.8
+
+Release changes:
+
+* Bumps to cats 1.0.0-RC1 and upgrades others ([#42](https://github.com/frees-io/sbt-freestyle/pull/42))
+
+
 ## 10/24/2017 - Version 0.3.7
 
 Release changes:
