@@ -64,7 +64,8 @@ object FreestylePlugin extends AutoPlugin {
         "gray-light"      -> "#E6E7EC",
         "gray-lighter"    -> "#F4F5F9",
         "white-color"     -> "#E6E7EC"
-      )
+      ),
+      micrositePushSiteWith := GitHub4s
     )
 
     lazy val commonDeps: Seq[ModuleID] = Seq(%%("scalatest") % "test")
@@ -152,8 +153,8 @@ object FreestylePlugin extends AutoPlugin {
         scalaBinaryVersion.value == "2.12" && ((baseDirectory in LocalRootProject).value / "docs")
           .exists())("docs/tut".asRunnableItem),
       resolvers += Resolver.sonatypeRepo("snapshots"),
-      scalaVersion := "2.12.3",
-      crossScalaVersions := Seq(scalac.`2.11`, "2.12.3"),
+      scalaVersion := scalac.`2.12`,
+      crossScalaVersions := Seq(scalac.`2.11`, scalac.`2.12`),
       scalacOptions ++= scalacAdvancedOptions,
       scalacOptions ~= (_ filterNot Set("-Yliteral-types", "-Xlint").contains),
       parallelExecution in Test := false,
