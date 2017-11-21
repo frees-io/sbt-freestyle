@@ -64,7 +64,8 @@ object FreestylePlugin extends AutoPlugin {
         "gray-light"      -> "#E6E7EC",
         "gray-lighter"    -> "#F4F5F9",
         "white-color"     -> "#E6E7EC"
-      )
+      ),
+      micrositePushSiteWith := GitHub4s
     )
 
     lazy val commonDeps: Seq[ModuleID] = Seq(%%("scalatest") % "test")
