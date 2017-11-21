@@ -153,8 +153,8 @@ object FreestylePlugin extends AutoPlugin {
         scalaBinaryVersion.value == "2.12" && ((baseDirectory in LocalRootProject).value / "docs")
           .exists())("docs/tut".asRunnableItem),
       resolvers += Resolver.sonatypeRepo("snapshots"),
-      scalaVersion := "2.12.3",
-      crossScalaVersions := Seq(scalac.`2.11`, "2.12.3"),
+      scalaVersion := scalac.`2.12`,
+      crossScalaVersions := Seq(scalac.`2.11`, scalac.`2.12`),
       scalacOptions ++= scalacAdvancedOptions,
       scalacOptions ~= (_ filterNot Set("-Yliteral-types", "-Xlint").contains),
       parallelExecution in Test := false,
