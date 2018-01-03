@@ -1,5 +1,12 @@
 # Changelog
 
+## 01/03/2018 - Version 0.3.14
+
+Release changes:
+
+* Arf update org policies version ([#51](https://github.com/frees-io/sbt-freestyle/pull/51))
+
+
 ## 11/30/2017 - Version 0.3.13
 
 Release changes:
