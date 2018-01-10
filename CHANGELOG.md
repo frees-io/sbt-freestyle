@@ -1,5 +1,12 @@
 # Changelog
 
+## 01/10/2018 - Version 0.3.15
+
+Release changes:
+
+* Update org policies ([#53](https://github.com/frees-io/sbt-freestyle/pull/53))
+
+
 ## 01/03/2018 - Version 0.3.14
 
 Release changes:
