@@ -1,5 +1,12 @@
 # Changelog
 
+## 02/12/2018 - Version 0.3.19
+
+Release changes:
+
+* Bumps up libraries by using sbtorg 0.8.26 ([#57](https://github.com/frees-io/sbt-freestyle/pull/57))
+
+
 ## 02/02/2018 - Version 0.3.18
 
 Release changes:
