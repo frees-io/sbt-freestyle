@@ -1,5 +1,12 @@
 # Changelog
 
+## 03/05/2018 - Version 0.3.20
+
+Release changes:
+
+* Upgrades to Sbt 1.1.1  ([#58](https://github.com/frees-io/sbt-freestyle/pull/58))
+
+
 ## 02/12/2018 - Version 0.3.19
 
 Release changes:
