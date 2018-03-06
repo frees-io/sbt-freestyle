@@ -1,5 +1,12 @@
 # Changelog
 
+## 03/06/2018 - Version 0.3.21
+
+Release changes:
+
+* Releases 0.3.21 for sbt-org-policies 0.8.28 ([#59](https://github.com/frees-io/sbt-freestyle/pull/59))
+
+
 ## 03/05/2018 - Version 0.3.20
 
 Release changes:
