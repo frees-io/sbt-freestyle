@@ -140,7 +140,7 @@ object FreestylePlugin extends AutoPlugin {
         TravisFileType(crossScalaVersions.value, orgScriptCICommandKey, orgAfterCISuccessCommandKey)
       ),
       // format: ON
-      orgSupportedScalaJSVersion := Some("0.6.22"),
+      orgSupportedScalaJSVersion := Some("0.6.24"),
       orgScriptTaskListSetting := List(
         (clean in Global).asRunnableItemFull,
         SetSetting(coverageEnabled in Global, true).asRunnableItem,
