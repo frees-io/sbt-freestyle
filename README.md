@@ -18,7 +18,7 @@ To get started with SBT, simply add the following to your `plugins.sbt` file.
 [comment]: # (Start Replace)
 
 ```scala
-addSbtPlugin("io.frees" % "sbt-freestyle" % "0.3.23")
+addSbtPlugin("io.frees" % "sbt-freestyle" % "0.3.24")
 ```
 
 [comment]: # (End Replace)
