@@ -1,5 +1,13 @@
 # Changelog
 
+## 08/07/2018 - Version 0.3.24
+
+Release changes:
+
+* Upgrade to the latest sbt-org-policies version ([#63](https://github.com/frees-io/sbt-freestyle/pull/63))
+* update scala-js 0.6.24 ([#62](https://github.com/frees-io/sbt-freestyle/pull/62))
+
+
 ## 06/05/2018 - Version 0.3.23
 
 Release changes:
