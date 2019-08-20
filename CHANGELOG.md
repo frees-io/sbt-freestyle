@@ -1,5 +1,12 @@
 # Changelog
 
+## 08/20/2019 - Version 0.3.25
+
+Release changes:
+
+* Update dependencies ([#64](https://github.com/frees-io/sbt-freestyle/pull/64))
+
+
 ## 08/07/2018 - Version 0.3.24
 
 Release changes:
