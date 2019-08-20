@@ -1,5 +1,5 @@
 /*
- * Copyright 2017-2018 47 Degrees, LLC. <http://www.47deg.com>
+ * Copyright 2017-2019 47 Degrees, LLC. <http://www.47deg.com>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -140,7 +140,7 @@ object FreestylePlugin extends AutoPlugin {
         TravisFileType(crossScalaVersions.value, orgScriptCICommandKey, orgAfterCISuccessCommandKey)
       ),
       // format: ON
-      orgSupportedScalaJSVersion := Some("0.6.24"),
+      orgSupportedScalaJSVersion := Some("0.6.28"),
       orgScriptTaskListSetting := List(
         (clean in Global).asRunnableItemFull,
         SetSetting(coverageEnabled in Global, true).asRunnableItem,

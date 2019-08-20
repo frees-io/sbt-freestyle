@@ -1,16 +1,16 @@
 language: scala
 
 jdk:
-- oraclejdk8
+- openjdk8
 
 matrix:
   include:
-    - scala: 2.12.6
+    - scala: 2.12.8
       env:
-        - SBT_VERSION=1.2.1
+        - SBT_VERSION=1.2.8
     - scala: 2.10.7
       env:
-        - SBT_VERSION=0.13.17
+        - SBT_VERSION=0.13.18
 
 before_cache:
 - du -h -d 1 $HOME/.ivy2/
@@ -43,7 +43,7 @@ after_success:
     if grep -q "SNAPSHOT" version.sbt; then
       sbt ^^$SBT_VERSION publish;
     else
-      if [ "$SBT_VERSION" = "1.2.1" ]; then
+      if [ "$SBT_VERSION" = "1.2.8" ]; then
         sbt ^^$SBT_VERSION orgUpdateDocFiles;
         git reset --hard HEAD;
         git clean -f;
